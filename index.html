@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyboardShop - Современные клавиатуры для любых задач</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>KeyboardShop</h1>
+        <p>Современные клавиатуры для любых задач</p>
+    </header>
+    <main>
+        <h2>Найдите лучшую клавиатуру!</h2>
+        <div class="filters">
+            <label for="priceRange">Цена: <span id="priceValue">10000</span> рублей</label>
+            <input type="range" id="priceRange" min="1000" max="20000" value="10000" step="1000" oninput="updatePriceValue()">
+            <button onclick="filterProducts('favorite')">Показать избранное</button>
+            <button onclick="filterProducts('new')">Показать Новинки</button>
+            <button onclick="filterProducts('all')">Показать всё</button>
+        </div>
+        <div class="product-gallery">
+            <div class="product" data-price="1000" data-favorite="false" data-new="true">
+                <img src="keyboard1.png" alt="Клавиатура 1">
+                <h3>Клавиатура "Работник"</h3>
+                <p>Удобная клавиатура для офисной работы.</p>
+                <p>Цена: 1000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="4000" data-favorite="false" data-new="false">
+                <img src="keyboard2.png" alt="Клавиатура 2">
+                <h3>Клавиатура "Любитель"</h3>
+                <p>Клавиатура с RGB-подсветкой и удобной подставкой для рук - для комфортной игры.</p>
+                <p>Цена: 4000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="3000" data-favorite="false" data-new="true">
+                <img src="keyboard3.png" alt="Клавиатура 3">
+                <h3>Клавиатура "Универсал"</h3>
+                <p>Прекрасный выбор для дома и офиса.</p>
+                <p>Цена: 3000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="10000" data-favorite="false" data-new="false">
+                <img src="keyboard4.png" alt="Клавиатура 4">
+                <h3>Клавиатура "Геймер"</h3>
+                <p>Отличный вариант для тех, кому важна точность и скорость.</p>
+                <p>Цена: 10000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="4500" data-favorite="false" data-new="true">
+                <img src="keyboard5.png" alt="Клавиатура 5">
+                <h3>Клавиатура "Стиль"</h3>
+                <p>Стильная клавитаруа с подсветкой для любых целей.</p>
+                <p>Цена: 4500 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="2500" data-favorite="false" data-new="false">
+                <img src="keyboard6.png" alt="Клавиатура 6">
+                <h3>Клавиатура "Мини"</h3>
+                <p>Ничего лишнего.</p>
+                <p>Цена: 2500 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
